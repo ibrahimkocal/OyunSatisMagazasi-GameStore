@@ -225,7 +225,7 @@ a {
   .card {
     width: 80%;
     height: auto;
-    margin-left: 35px; } }
+    margin-left: 18px; } }
 
 @media screen and (min-width: 390px) and (max-width: 424px) {
   .card {
