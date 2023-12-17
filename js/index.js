@@ -65,16 +65,12 @@ function loadMoreGames() {
     var loadingLogo = document.getElementById("loading-logo");
     var additionalGames = document.getElementById("additional-games");
 
-    // Simüle edilmiş bir asenkron veri yükleme işlemi (örnek olarak setTimeout kullanılıyor)
     setTimeout(function () {
-        // Yükleme logosunu göster
-        loadingLogo.classList.remove("d-none");
-        // "Daha Fazla Göster" butonunu gizle
-        loadMoreButton.style.display = "none";
 
-        // Simüle edilmiş bir asenkron veri yükleme işlemi (örnek olarak setTimeout kullanılıyor)
+        loadingLogo.classList.remove("d-none");
+        loadMoreButton.style.display = "none";
         setTimeout(function () {
-            // Yüklenen oyun bilgilerini göster
+
             var newGamesHTML = "";
             for (var i = 0; i < 3; i++) {
                 newGamesHTML += `
@@ -106,15 +102,12 @@ function loadMoreGames() {
             </div>
                 `;
             }
-
             additionalGames.innerHTML += newGamesHTML;
 
-            // Yükleme logosunu gizle
             loadingLogo.classList.add("d-none");
-                        // "Daha Fazla Göster" butonunu göster
             loadMoreButton.style.display("block");
 
-        }, 2000); // Örnek olarak 2 saniye sonra yükleme tamamlanıyor gibi düşünülebilir
+        }, 2000);
 
-    }, 2000); // Örnek olarak 2 saniye sonra yükleme tamamlanıyor gibi düşünülebilir
+    }, 2000);
 }
