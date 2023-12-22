@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap');
 *
 {
-    
-    font-family: 'Manrope', sans-serif;
-    font-size: 15px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
 }
 
 html {
-    scroll-behavior: smooth;
-    box-sizing: border-box; 
+  scroll-behavior: smooth;
+  box-sizing: border-box; 
 }
 
 $font-color: #fff;
@@ -16,14 +15,14 @@ $font-size: 5px;
 $background-color: #000000;
 
 body{
-    background-color: $background-color;
-    max-width: 100%;
+  background-color: $background-color;
+  max-width: 100%;
 } 
 
 #comments{
-    color: $font-color;
-    background-color: $background-color ;
-    max-width: 100%;
+  color: $font-color;
+  background-color: $background-color ;
+  max-width: 100%;
 }
 
 a{
@@ -197,31 +196,6 @@ $shop: green;
   }
 }
 
-.floating-button {
-  position:fixed;
-  bottom: 20px;
-  right: 30px;
-  background-color:white;
-  border-radius: 50%;
-  padding: 13px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
-  z-index: 999;
-
-  a {
-    color: white;
-    text-decoration: none;
-
-    i{
-      color: black; font-size: 40px;
-    }
-  }
-  
-  &:hover {
-    transform: scale(1.1);
-  }
-}
-
 .hidden {
   display: none;
 }
@@ -280,7 +254,7 @@ $shop: green;
   height: 3em;
   transform: translate(-50%, -50%);
  }
- 
+
  .full-rounded {
   border-radius: 2em;
  }
@@ -295,17 +269,279 @@ $shop: green;
   border-radius: 5px;
 }
 
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+    
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+    
+  > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+  }
+}
+
+.containerr {
+    max-width: 1044px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.carousell {
+    display: block;
+    text-align: left;
+    position: relative;
+    margin-bottom: 22px;
+    
+    > input {
+        clip: rect(1px, 1px, 1px, 1px);
+        clip-path: inset(50%);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        
+        &:nth-of-type(6):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -500%; }
+        &:nth-of-type(5):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -400%; }
+        &:nth-of-type(4):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -300%; }
+        &:nth-of-type(3):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -200%; }
+        &:nth-of-type(2):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -100%; }
+        &:nth-of-type(1):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: 0%; }
+        
+        &:nth-of-type(1):checked ~ .carousel__thumbnails li:nth-of-type(1) { box-shadow: 0px 0px 0px 5px rgba(255, 252, 252, 0.791); }
+        &:nth-of-type(2):checked ~ .carousel__thumbnails li:nth-of-type(2) { box-shadow: 0px 0px 0px 5px rgba(255, 252, 252, 0.791); }
+        &:nth-of-type(3):checked ~ .carousel__thumbnails li:nth-of-type(3) { box-shadow: 0px 0px 0px 5px rgba(255, 252, 252, 0.791);  }
+        &:nth-of-type(4):checked ~ .carousel__thumbnails li:nth-of-type(4) { box-shadow: 0px 0px 0px 5px rgba(255, 252, 252, 0.791);  }
+        &:nth-of-type(5):checked ~ .carousel__thumbnails li:nth-of-type(5) { box-shadow: 0px 0px 0px 5px rgba(255, 252, 252, 0.791);  }
+        &:nth-of-type(6):checked ~ .carousel__thumbnails li:nth-of-type(6) { box-shadow: 0px 0px 0px 5px rgba(255, 252, 252, 0.791);  }
+    }
+}
+
+.carousel__slides {
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.carousel__slide {
+    position: relative;
+    display: block;
+    flex: 1 0 100%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 300ms ease-out;
+    box-sizing: border-box;
+    white-space: normal;
+    
+    figure {
+        display: flex;
+        margin: 0;
+    }
+    
+    div {
+        @include aspect-ratio(3, 2);
+        width: 100%;
+    }
+    
+    img {
+        display: block;
+        flex: 1 1 auto;
+        object-fit: cover;
+    }
+    
+    figcaption {
+        align-self: flex-end;
+        padding: 20px 20px 0 20px;
+        flex: 0 0 auto;
+        width: 25%;
+        min-width: 150px;
+    }
+    
+    .credit {
+        margin-top: 1rem;
+        color: rgba(0, 0, 0, 0.5);
+        display: block;        
+    }
+    
+    &.scrollable {
+        overflow-y: scroll;
+    }
+}
+
+.carousel__thumbnails {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    
+    margin: 0 -10px;
+    
+    .carousel__slides + & {
+        margin-top: 20px;
+    }
+    
+    li {        
+        flex: 1 1 auto;
+        max-width: calc((100% / 6) - 20px);  
+        margin: 0 10px;
+        transition: all 300ms ease-in-out;
+    }
+    
+    label {
+        display: block;
+        @include aspect-ratio(1,1);
+        
+                  
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            
+            img {
+                box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.25);
+                transition: all 300ms ease-in-out;
+            }
+        }
+    }
+    
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 1px) and (max-width: 389px) {
+  .card {
+    width: 74%; 
+    height: auto; 
+    margin-left: 44px; 
+  }
+  
+.floating-button {
+    position:fixed;
+    bottom: 20px;
+    right: 10px;
+    background-color:white;
+    border-radius: 50%;
+    padding: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    z-index: 999;
+
+    a {
+      color: white;
+      text-decoration: none;
+
+      i{
+        color: black; font-size: 28px;
+      }
+    }
+    
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
 @media screen and (min-width: 390px) and (max-width: 424px) {
   .card {
-    width: 82%; 
+    width: 75%; 
     height: auto; 
-    margin-left: 35px; 
+    margin-left: 45px; 
   }   
 
   .floating-button {
     position:fixed;
     bottom: 20px;
-    right: 12px;
+    right: 10px;
+    background-color:white;
+    border-radius: 50%;
+    padding: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    z-index: 999;
+  
+    a {
+      color: white;
+      text-decoration: none;
+  
+      i{
+        color: black; font-size: 28px;
+      }
+    }
+    
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 566px)  {
+  .card {
+    width: 75%; 
+    height: auto; 
+    margin-left: 13%;
+  }  
+
+  .floating-button {
+    position:fixed;
+    bottom: 20px;
+    right: 10px;
+    background-color:white;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    z-index: 999;
+  
+    a {
+      color: white;
+      text-decoration: none;
+  
+      i{
+        color: black; font-size: 30px;
+      }
+    }
+    
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .sepeteekle{
+    margin-left: 25%;
+  }
+}
+
+@media (min-width: 567px) and (max-width: 1920px) {
+  .card {
+    width: 88%; 
+    height: auto; 
+    margin-left: 30px; 
+  }  
+
+  .floating-button {
+    position:fixed;
+    bottom: 20px;
+    right: 13px;
     background-color:white;
     border-radius: 50%;
     padding: 12px;
@@ -326,53 +562,16 @@ $shop: green;
       transform: scale(1.1);
     }
   }
-}
 
-@media screen and (min-width: 425px) and (max-width: 566px)  {
-  .card {
-    width: 75%; 
-    height: auto; 
-    margin-left: 13%;
-  }  
-
-  .floating-button {
-    position:fixed;
-    bottom: 20px;
-    right: 12px;
-    background-color:white;
-    border-radius: 50%;
-    padding: 13px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
-    z-index: 999;
-  
-    a {
-      color: white;
-      text-decoration: none;
-  
-      i{
-        color: black; font-size: 35px;
-      }
-    }
-    
-    &:hover {
-      transform: scale(1.1);
-    }
+  .sepeteekle{
+    margin-left: 33%;
   }
 }
 
-@media (min-width: 567px) and (max-width: 1920px) {
-  .card {
-    width: 88%; 
-    height: auto; 
-    margin-left: 30px; 
-  }  
-}
-
-@media (min-width: 768px){
+@media (min-width: 768px)  {
     .category{
         margin-left: 60px;
-    }    
+    }   
 }
 
 
