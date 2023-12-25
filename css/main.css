@@ -316,7 +316,7 @@ footer div i h4 {
   padding: 0;
   margin: 0;
   display: flex;
-  margin: 0 -10px; }
+  margin: 0 -50px; }
   .carousel__slides + .carousel__thumbnails {
     margin-top: 20px; }
   .carousel__thumbnails li {
@@ -377,7 +377,7 @@ footer div i h4 {
 
 @media screen and (min-width: 390px) and (max-width: 424px) {
   .card {
-    width: 75%;
+    width: 70%;
     height: auto;
     margin-left: 45px; }
   .floating-button {
