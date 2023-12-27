@@ -153,7 +153,6 @@ $shop: green;
 
   &:hover {
     transform: scale(1.1);
-
   }
 } 
 
@@ -428,11 +427,18 @@ $shop: green;
     }
 }
 
+$normal-scale: 1;
+
 @media screen and (min-width: 1px) and (max-width: 389px) {
   .card {
+    transition: none;
     width: 74%; 
     height: auto; 
     margin-left: 44px; 
+
+    &:hover {
+      transform: scale($normal-scale); 
+    }
   }
   
 .floating-button {
@@ -461,11 +467,30 @@ $shop: green;
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 375px) {
+
+  $text-size: 13px;
+  .text  {
+    font-size: $text-size;
+    li{
+      font-size: $text-size;
+    }
+
+    a{
+      font-size: $text-size;
+    }
+  }
+}
+
 @media screen and (min-width: 390px) and (max-width: 424px) {
   .card {
     width: 70%; 
     height: auto; 
-    margin-left: 45px; 
+    margin-left: 50px; 
+
+    &:hover {
+      transform: scale($normal-scale ); 
+    }
   }   
 
   .floating-button {
@@ -487,10 +512,6 @@ $shop: green;
         color: black; font-size: 28px;
       }
     }
-    
-    &:hover {
-      transform: scale(1.1);
-    }
   }
 }
 
@@ -499,6 +520,10 @@ $shop: green;
     width: 75%; 
     height: auto; 
     margin-left: 13%;
+
+    &:hover {
+      transform: scale($normal-scale ); 
+    }
   }  
 
   .floating-button {

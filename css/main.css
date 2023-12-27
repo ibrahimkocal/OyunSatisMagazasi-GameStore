@@ -353,9 +353,12 @@ footer div i h4 {
 
 @media screen and (min-width: 1px) and (max-width: 389px) {
   .card {
+    transition: none;
     width: 74%;
     height: auto;
     margin-left: 44px; }
+    .card:hover {
+      transform: scale(1); }
   .floating-button {
     position: fixed;
     bottom: 20px;
@@ -375,11 +378,21 @@ footer div i h4 {
     .floating-button:hover {
       transform: scale(1.1); } }
 
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  .text {
+    font-size: 13px; }
+    .text li {
+      font-size: 13px; }
+    .text a {
+      font-size: 13px; } }
+
 @media screen and (min-width: 390px) and (max-width: 424px) {
   .card {
     width: 70%;
     height: auto;
-    margin-left: 45px; }
+    margin-left: 50px; }
+    .card:hover {
+      transform: scale(1); }
   .floating-button {
     position: fixed;
     bottom: 20px;
@@ -395,15 +408,15 @@ footer div i h4 {
       text-decoration: none; }
       .floating-button a i {
         color: black;
-        font-size: 28px; }
-    .floating-button:hover {
-      transform: scale(1.1); } }
+        font-size: 28px; } }
 
 @media screen and (min-width: 425px) and (max-width: 566px) {
   .card {
     width: 75%;
     height: auto;
     margin-left: 13%; }
+    .card:hover {
+      transform: scale(1); }
   .floating-button {
     position: fixed;
     bottom: 20px;
