@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/games logo.png" type="img/x-icon" />
+    <title>Game Store</title>
+</head>
+<body>
+    <div id="floatingButton" class="floating-button">
+        <a href="mailto:ibrahiimkocal@gmail.com"><i class="fas fa-envelope" title="İletişim"></i></a>
+    </div>
+
+    <nav class="mt-3">
+        <div class="container-md ">
+            <div class="ms-5 d-flex justify-content-between align-items-center">
+                <a href="index.html"><img src="img/games logo2.png" width="100"></a>
+                <form class="form-inline d-flex my-2 w-50 ms-5 mt-2 h-50 position-relative d-none d-md-block">
+                    <input placeholder="Ara" class="form-control mr-sm-2 w-100 input" name="search" type="search"
+                        aria-label="Search" id="searchInput">
+                    <i class="fas fa-lg fa-search position-absolute top-50 translate-middle-y end-0 px-2 m-auto"
+                        id="searchIcon"></i>
+                </form>
+                <div class="d-flex">
+                    <a class="btn btn-outline-warning border-0 h-50 ms-5 d-none d-md-block d-lg-none">
+                        <i class="fas fa-regular fa-user" style="font-size: 32px;"></i>
+                    </a>
+                    <a class="btn btn-outline-warning h-50 ms-5 mt-lg-1 d-none d-lg-block" href="login.html">Oturum Aç / Kayıt</a>
+                    <div class="shopping-cart position-relative d-none d-md-block">
+                        <button type="button" class="btn btn-sm btn-outline-warning border-0 ms-4 py-2 px-2 btn-cart">
+                            <i class="fas fa-shopping-cart d-none d-md-block" style="font-size: 30px;"></i>
+                            <span id="item-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger mt-2">0</span>
+                        </button>
+
+                        <div class="shopping-cart-list bg-primary d-none">
+                            <b class="fs-5 text-white my-3">Shopping Cart</b>
+                        </div>
+                    </div>    
+                </div>
+                <div class="d-md-none me-4 mt-1">
+                    <button id="toggleButton" class="btn btn-sm btn-outline-light">
+                        <i class="fas fa-solid fa-bars" style="font-size: 28px;"></i>
+                    </button>
+
+                    <div id="dropdownDiv" class="hidden">
+                        <i id="closeButton" class="fas fa-times d-flex justify-content-end me-5"
+                            style="color:#ffffff; font-size: 38px;"></i>
+                        <div class="col-10 mx-auto my-auto d-flex justify-content-center">
+                            <img class="img-fluid ms-5 col-4 col-sm-4 col-md-3 col-lg-2" src="img/games logo2.png">
+                        </div>
+                        <div class="my-3">
+                            <a style="text-decoration: none;" class="btn btn-outline-warning w-50 ms-5" href="login.html">Kayıt / Giriş</a>
+                            <br> 
+                            <div class="container">
+                                <div class="row ms-5 mt-4">
+                                  <div class="col-12 d-flex align-items-center justify-content-center">
+                                    <a href="index.html" class="btn btn-lg w-75 btn-light me-3 mt-2">ANA SAYFA</a>
+                                  </div>
+                                  <div class="col-12 d-flex align-items-center justify-content-center">
+                                    <a href="pcoyunları.html" class="btn btn-lg w-75 btn-light me-3 mt-2">PC OYUNLARI</a>
+                                  </div>
+                                  <div class="col-12 d-flex align-items-center justify-content-center">
+                                    <a href="dijitalplatformlar.html" class="btn btn-lg w-75 btn-light me-3 mt-2">DİJİTAL PLATFORMLAR</a>
+                                  </div>
+                                  <div class="col-12 d-flex align-items-center justify-content-center">
+                                    <a href="contact.html" class="btn btn-lg w-75 btn-light me-3 mt-2">İLETİŞİM</a>
+                                  </div>
+                                </div>
+                             </div>
+                             <form class="form-inline w-75 mt-5 h-50 position-relative" style="margin-left: 14%;">
+                                <input placeholder="Ara" class="form-control w-100 input" name="search" type="search"
+                                    aria-label="Search" id="searchInput">
+                                <i class="fas fa-lg fa-search position-absolute top-50 translate-middle-y end-0 px-2 m-auto"
+                                    id="searchIcon" style="color: black;"></i>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </nav>
+
+    <div class="container d-flex w-100 mt-4 mx-auto my-auto text-center d-none d-md-block ">
+        <div class="justify-content-between">
+            <a style="text-decoration: none;" href="index.html" class="buttonn me-3">ANA SAYFA</a>
+            <a style="text-decoration: none;" href="pcoyunları.html" class="buttonn me-3">PC OYUNLARI</a>
+            <a style="text-decoration: none;" href="dijitalplatformlar.html" class="buttonn me-3">DİJİTAL PLATFORMLAR</a>
+            <a style="text-decoration: none;" href="contact.html" class="buttonn me-3">İLETİŞİM</a>
+        </div>
+    </div>
+
+    <section id="contact" class="mt-5">
+        <div class="container mt-5">
+            <div class="row text-white justify-content-center text-center"  style="margin-top: 85px;">
+                <img style="width: 180px;" src="img/games logo2.png">
+                <h2 class="mt-5">İLETİŞİM</h2>
+                <small>İbrahim Koçal</small>
+                <div class="mt-5">
+                    <div class="d-flex justify-content-center">
+                        <i class="far fa-envelope fa-2x" style="color: #ffffff;"></i>
+                        <h5 class="ms-3 mt-1">ibrahiimkocal@gmail.com</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer id="footer" class="text-center p-4 text-white">      
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 col-md-5 col-lg-3 mt-4 text-center">
+                    <ul class="list-unstyled">
+                        <h3 class="text-white-50">Bilgiler</h3>
+                        <br>
+                        <li><a class="text-light" href="#">Hakkımızda</a></li>
+                        <li><a class="text-light" href="#">Gizlilik Politikası</a></li>
+                        <li><a class="text-light" href="#">İade Politikası</a></li>
+                        <li><a class="text-light" href="#">KVKK Bilgilendirme</a></li>
+                        <li><a class="text-light" href="contact.html">İletişim</a></li>
+                    </ul>
+                </div>
+
+                <div class="d-none d-lg-block col-12 col-lg-6 mt-5 mt-sm-5 text-center">
+                    <figure>
+                        <div class="col-11 mx-auto my-auto d-flex justify-content-center">
+                            <img class="img-fluid my-3 col-4 col-sm-4 col-md-3 col-lg-2" src="img/games logo2.png">
+                        </div>
+                        <blockquote class="blockquote">
+                            <p>Copyright &copy; <span>Game Store</span></p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                            Bu kurumun gerçeklikle bir alakası yoktur. Hayal ürünüdür<br><cite
+                                title="Source Title">İbrahim Koçal</cite>
+                        </figcaption>
+                    </figure>
+                    <div class="col d-flex justify-content-center align-items-center ms-2 ms-sm-4 ms-md-5">
+                        <a target="_blank" title="ibrahimkocal_" href="https://www.instagram.com/ibrahimkocal_"
+                            class="btn-sm instagram me-4">
+                            <i class="fab fa-2x fa-instagram"></i>
+                        </a>
+                        <a target="_blank" title="kocalovski" href="" class="btn-sm discord me-4">
+                            <i class="fab fa-2x fa-discord"></i>
+                        </a>
+                        <a target="_blank" title="ibrahimkocal" href="https://www.linkedin.com/in/ibrahimkocal/"
+                            class="btn-sm linkedin me-4">
+                            <i class="fab fa-2x fa-linkedin-in"></i>
+                        </a>
+                        <a target="_blank" title="ibrahimkocal" href="https://github.com/ibrahimkocal"
+                            class=" btn-sm github me-5">
+                            <i class="fab fa-2x fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-5 col-lg-3 mt-4 mt-lg-5 mt-xl-4 mt-xxl-3 text-center">
+                    <ul class="list-unstyled">
+                        <h3 class="text-white-50">Tavsiye Edilen</h3>
+                        <br>
+                        <li><a class="text-light" href="gamesDetails/tlou.html">The Last of Us Part I PC Steam Key</a></li>
+                        <li><a class="text-light" href="gamesDetails/godofwar.html">God of War PC Steam Key </a></li>
+                        <li><a class="text-light" href="gamesDetails/spiderman.html">Marvel's Spider-Man Remastered <br>PC Steam Key</a></li>
+                        <br>    
+                    </ul>
+                </div>
+
+                <div class="d-lg-none col-12 col-md-5 mt-5 text-center mt-sm-5">
+                    <figure>
+                        <div class="col-11 mx-auto my-auto d-flex justify-content-center">
+                            <img class="img-fluid my-3 col-4 col-sm-4 col-md-3 col-lg-2" src="img/games logo2.png">
+                        </div>
+                        <blockquote class="blockquote">
+                            <p>Copyright &copy; <span>Game Store</span></p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                            Bu kurumun gerçeklikle bir alakası yoktur. Hayal ürünüdür<br><cite
+                                title="Source Title">İbrahim Koçal</cite>
+                        </figcaption>
+                    </figure>
+                    <div class="col d-flex justify-content-center ms-4 ms-sm-4 ms-md-5 ">
+                        <a target="_blank" title="ibrahimkocal_" href="https://www.instagram.com/ibrahimkocal_"
+                            class="btn-sm instagram me-4">
+                            <i class="fab fa-2x fa-instagram"></i>
+                        </a>
+                        <a target="_blank" title="kocalovski" href="" class="btn-sm discord me-4">
+                            <i class="fab fa-2x fa-discord"></i>
+                        </a>
+                        <a target="_blank" title="ibrahimkocal" href="https://www.linkedin.com/in/ibrahimkocal/"
+                            class="btn-sm linkedin me-4">
+                            <i class="fab fa-2x fa-linkedin-in"></i>
+                        </a>
+                        <a target="_blank" title="ibrahimkocal" href="https://github.com/ibrahimkocal"
+                            class=" btn-sm github me-5">
+                            <i class="fab fa-2x fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-sm-row align-items-center justify-content-sm-between mt-5 ms-0 ms-sm-">
+                    <i class="fab fa-whatsapp d-flex align-items-end ms-md-4 ms-lg-0 " style="color: #ffffff; font-size: 38px;">
+                        <h4 class="ms-3 mt-1"> +90 000 000 00 00</h4>
+                    </i>
+                    
+                    <i class="fas fa-phone d-flex align-items-end mt-3 mt-sm-0 mb-sm-2 me-2 me-sm-4 me-md-5 "style="color: #ffffff; font-size: 35px;">
+                        <h4 class="ms-3">0 000 000 00 00</h4>
+                    </i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

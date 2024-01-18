@@ -20,7 +20,7 @@
     <nav class="mt-3">
         <div class="container-md ">
             <div class="ms-5 d-flex justify-content-between align-items-center">
-                <a href="../index.html"><img src="../img/games logo2.png" width="100"></a>
+                <a href="index.html"><img src="img/games logo2.png" width="100"></a>
                 <form class="form-inline d-flex my-2 w-50 ms-5 mt-2 h-50 position-relative d-none d-md-block">
                     <input placeholder="Ara" class="form-control mr-sm-2 w-100 input" name="search" type="search"
                         aria-label="Search" id="searchInput">
@@ -31,10 +31,17 @@
                     <a class="btn btn-outline-warning border-0 h-50 ms-5 d-none d-md-block d-lg-none">
                         <i class="fas fa-regular fa-user" style="font-size: 32px;"></i>
                     </a>
-                    <a class="btn btn-outline-warning h-50 ms-5 mt-lg-1 d-none d-lg-block">Oturum Aç / Kayıt</a>
-                    <a href="" class="btn btn-sm btn-outline-warning border-0 ms-4 py-2 px-2 ">
-                        <i class="fas fa-shopping-cart d-none d-md-block" style="font-size: 30px;"></i>
-                    </a>
+                    <a class="btn btn-outline-warning h-50 ms-5 mt-lg-1 d-none d-lg-block" href="../login.html">Oturum Aç / Kayıt</a>
+                    <div class="shopping-cart position-relative d-none d-md-block">
+                        <button type="button" class="btn btn-sm btn-outline-warning border-0 ms-4 py-2 px-2 btn-cart">
+                            <i class="fas fa-shopping-cart d-none d-md-block" style="font-size: 30px;"></i>
+                            <span id="item-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger mt-2">0</span>
+                        </button>
+
+                        <div class="shopping-cart-list bg-primary d-none">
+                            <b class="fs-5 text-white my-3">Shopping Cart</b>
+                        </div>
+                    </div>    
                 </div>
                 <div class="d-md-none me-4 mt-1">
                     <button id="toggleButton" class="btn btn-sm btn-outline-light">
@@ -45,25 +52,24 @@
                         <i id="closeButton" class="fas fa-times d-flex justify-content-end me-5"
                             style="color:#ffffff; font-size: 38px;"></i>
                         <div class="col-10 mx-auto my-auto d-flex justify-content-center">
-                            <img class="img-fluid ms-5 col-4 col-sm-4 col-md-3 col-lg-2" src="../img/games logo2.png">
+                            <img class="img-fluid ms-5 col-4 col-sm-4 col-md-3 col-lg-2" src="img/games logo2.png">
                         </div>
                         <div class="my-3">
-                            <a style="text-decoration: none;" class="btn btn-outline-warning w-50 ms-5">Kayıt Ol</a>
-                            <a style="text-decoration: none;" target="_blank" class="btn btn-outline-success w-50 ms-5 mt-3">Giriş Yap</a>
+                            <a style="text-decoration: none;" class="btn btn-outline-warning w-50 ms-5" href="../login.html">Kayıt / Giriş</a>
                             <br> 
                             <div class="container">
                                 <div class="row ms-5 mt-4">
                                   <div class="col-12 d-flex align-items-center justify-content-center">
-                                    <a href="../pcoyunları.html" class="btn btn-lg w-75 btn-light me-3 mt-2">PC OYUNLARI</a>
+                                    <a href="index.html" class="btn btn-lg w-75 btn-light me-3 mt-2">ANA SAYFA</a>
                                   </div>
                                   <div class="col-12 d-flex align-items-center justify-content-center">
-                                    <a href="../konsoloyunları.html" class="btn btn-lg w-75 btn-light me-3 mt-2">KONSOL OYUNLARI</a>
+                                    <a href="pcoyunları.html" class="btn btn-lg w-75 btn-light me-3 mt-2">PC OYUNLARI</a>
                                   </div>
                                   <div class="col-12 d-flex align-items-center justify-content-center">
-                                    <a href="../dijitalplatformlar.html" class="btn btn-lg w-75 btn-light me-3 mt-2">DİJİTAL PLATFORMLAR</a>
+                                    <a href="dijitalplatformlar.html" class="btn btn-lg w-75 btn-light me-3 mt-2">DİJİTAL PLATFORMLAR</a>
                                   </div>
                                   <div class="col-12 d-flex align-items-center justify-content-center">
-                                    <a href="../contact.html" class="btn btn-lg w-75 btn-light me-3 mt-2">İLETİŞİM</a>
+                                    <a href="contact.html" class="btn btn-lg w-75 btn-light me-3 mt-2">İLETİŞİM</a>
                                   </div>
                                 </div>
                              </div>
@@ -79,10 +85,10 @@
             </div>
     </nav>
 
-    <div class="container d-flex w-100 mt-4 mx-auto my-auto text-center d-none d-md-block ">
+    <div class="container d-flex w-100 mt-4 mx-auto my-auto text-center d-none d-md-block">
         <div class="justify-content-between">
+            <a style="text-decoration: none;" href="../index.html" class="buttonn me-3">ANA SAYFA</a>
             <a style="text-decoration: none;" href="../pcoyunları.html" class="buttonn me-3">PC OYUNLARI</a>
-            <a style="text-decoration: none;" href="../konsoloyunları.html" class="buttonn me-3">KONSOL OYUNLARI</a>
             <a style="text-decoration: none;" href="../dijitalplatformlar.html" class="buttonn me-3">DİJİTAL PLATFORMLAR</a>
             <a style="text-decoration: none;" href="../contact.html" class="buttonn me-3">İLETİŞİM</a>
         </div>
@@ -188,7 +194,7 @@
                                 <br>
                                 <h2 class="text-center">1168.73 ₺</h2>
                                 <div class="text-center">
-                                    <button class="btn btn-lg btn-outline-warning mt-3 " style="text-decoration: none;">SEPETE EKLE</button>
+                                   <a href="../sepet.html"><button class="btn btn-lg btn-outline-warning mt-3 " style="text-decoration: none;">SEPETE EKLE</button></a>
                                 </div>
                                 <div class="mt-4">
                                     <hr>
