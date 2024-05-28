@@ -22,5 +22,6 @@ Bu platformu oluştururken, **HTML**, **CSS**, **JavaScript**, **Jquery**, **Boo
 ![Kategoriler - Category](readme_img/category.png)
 ![Giriş/Kayıt Ol - Login/Register](readme_img/login.png)
 ![Çok Satanlar - Best Sellers](readme_img/games.png)
+![Oyun - Game](readme_img/games.png)
 ![Responsive 1](readme_img/response1.png)
 ![Responsive 2](readme_img/response2.png)
